@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    {% block title %}
+
+    {% endblock title%}
+
+  </title>
+
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+  <header>
+    <h1>Welcome to Peng's jokes collection</h1>
+    <nav>
+      <ul>
+        <li>
+          <a href="{% url 'list' %}">Jokes List</a>
+        </li>
+        <li>
+          <a href="{% url 'new' %}">Add a new Joke</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    {% block content %}
+
+    {% endblock content %}
+  </main>
+  <footer>
+    <h3>Thank you for visiting!</h3>
+    <h3>Hope you enjoyed your time here!</h3>
+  </footer>
+</body>
+</html>

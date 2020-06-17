@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}
+DETAILS
+{% endblock title %}
+
+{% block content %}
+<h2>Hope you love this joke </h1>
+<h3>{{ object.title }}</h3>
+<p>{{ object.body|linebreaks }}</p>
+<a href=" {% url 'update' object.pk %}">UPDATE</a>
+<a href=" {% url 'delete' object.pk %}">DELETE</a>
+{% endblock content%}
